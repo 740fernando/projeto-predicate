@@ -19,10 +19,9 @@ public class Program {
 
         double min =100.0;
 
-        Predicate<Product> pred = p -> p.getPrice() >= min;
 
-        //Implementacao por lambda
-        list.removeIf(pred);
+        //Implementacao por lambda Inline
+        list.removeIf(p -> p.getPrice() >= min);
 
         list.forEach(product -> System.out.println(product));
     }
