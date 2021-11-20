@@ -16,8 +16,8 @@ public class Program {
         list.add(new Product("Tablet",350.00));
         list.add(new Product("HD Case",80.90));
 
-        //Implementacao por referencia ao metodo
-        list.removeIf(Product :: staticProductPredicate);
+        //Implementacao por referencia ao metodo não estatico
+        list.removeIf(Product :: noStaticProductPredicate);
 
         list.forEach(product -> System.out.println(product));
     }

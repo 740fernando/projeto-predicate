@@ -1,7 +1,6 @@
 package entities;
 
 
-import util.ProductPredicate;
 
 public class Product {
     private String name;
@@ -28,8 +27,8 @@ public class Product {
         this.price = price;
     }
 
-    public static boolean staticProductPredicate(Product p){
-        return p.getPrice() >= 100.0;
+    public boolean noStaticProductPredicate(){
+        return price >= 100.0;
     }
 
     @Override
